@@ -144,7 +144,8 @@
         <a href="databases.html"class="nav-button">Databases</a>
         <a href="documentation.html"class="nav-button">Documentation</a>
 		<a href="aboutme.html"class="nav-button">About Me</a>
-		<a href="home.html"class="nav-button">Dev Team</a>
+		<a href="form.html"class="nav-button">Codes</a>
+
     </nav>
 
     <div class="centered-content">
@@ -257,6 +258,41 @@ function or(sw) {
 <button style="padding: 12px 24px; font-size: 18px; margin-bottom: 50px; border-radius: 6px;" type="button" onclick="document.getElementById('myImage').src='on1.png'">XOR INPUT 1</button>
 <button style="padding: 12px 24px; font-size: 18px; margin-bottom: 50px; border-radius: 6px;" type="button" onclick="document.getElementById('myImage').src='on2.png'">XOR INPUT 2</button>
 </p>
+
+
+<p> Enter one number: </p>
+
+  <input type="number" id="num1">
+  <button onclick="add()">=</button>
+ 
+<p>The sum of all even numbers of your given number is: </p>
+
+  <h2 id="result"></h2>
+
+	
+	<script>
+function add() {
+
+    let n = parseInt(document.getElementById('num1').value);
+
+    let sum = 0;
+    let current = 1;
+
+   
+    while (current < n) { 
+        if (current % 2 == 0) {
+            sum += current;
+        }
+        current++;
+    }
+
+   
+
+    let resultElement = document.getElementById('result');
+    resultElement.textContent = sum;
+
+}
+</script>
 
 </body>
 </html>
