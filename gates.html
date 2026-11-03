@@ -274,7 +274,6 @@ function or(sw) {
 function add() {
 
     let n = parseInt(document.getElementById('num1').value);
-
     let sum = 0;
     let current = 1;
 
@@ -293,6 +292,78 @@ function add() {
 
 }
 </script>
+
+
+
+
+
+<p> Enter one number: </p>
+
+  <input type="number" id="num2">
+  <button onclick="odd()">=</button>
+
+ 
+<p>The sum of all odd numbers of your given number is: </p>
+
+  <h2 id="result"></h2>
+
+	
+	<script>
+function odd() {
+    let n = parseInt(document.getElementById('num2').value);
+    let sum = 0;
+    let current = 1;
+
+    while (current <= n) {
+        if (current % 2 != 0) {
+            sum += current;
+        }
+        current++;
+    }
+
+    let resultElement = document.getElementById('result');
+    resultElement.textContent = sum;
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+<p> Enter one number: </p>
+
+<input type="number" id="num3">
+<button onclick="factorial()">=</button>
+
+<p>The sum of all factorial numbers of your given number is: </p>
+
+<h2 id="result"></h2>
+
+<script>
+function factorial() {
+    let n = parseInt(document.getElementById('num3').value);
+    let sum = 0;
+    let currentFactorial = 1;
+
+    for (let i = 1; i <= n; i++) {
+        currentFactorial *= i;
+        sum += currentFactorial;
+    }
+
+    let resultElement = document.getElementById('result');
+    resultElement.textContent = sum;
+}
+</script>
+
+
+
+
+
 
 </body>
 </html>
